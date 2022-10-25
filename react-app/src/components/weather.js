@@ -79,22 +79,22 @@ class WeatherDetails extends Component {
         return (
             <div>
                 <h1> My Home Town is <span style={{ color: "green" }}>Ahmedabad, India!</span></h1>
-                <img src={townImg} height='250px' width='450px' />
+                <img alt='Ahmedabad Town' src={townImg} height='250px' width='450px' />
                 <p>Ahmedabad is a beautiful urban city located in Gujarat State of India. It is also heritage city.</p>
                 <p>The main attraction and tourist places are Atal Pedestarian bridge, Gandhi Ashram, Alpha One Mall, Riverfront.</p>
                 <div>
-                    {this.state.weatherLogo ? <img height='50px' src={this.state.weatherLogo}></img> : ''}
+                    {this.state.weatherLogo ? <img alt='Weather' height='50px' src={this.state.weatherLogo}></img> : ''}
                     {this.state.weather ? <div> Current Temperature in Ahmedabad: {this.state.weather}
-                        {this.state.unit == 'metric' ? ' Degree' : ' Fahrenheit'}
+                        {this.state.unit === 'metric' ? ' Celsius' : ' Fahrenheit'}
                     </div> : ''}
                     {this.state.unit === 'metric' ?
                         <div>
-                            <img className='weatherIconCss' onClick={() => { this.setStateData('metric') }} src={celc_s} />
-                            <img className='weatherIconCss' onClick={() => { this.setStateData('imperial') }} src={fahren_d} />
+                            <img alt='Celsius' className='weatherIconCss' onClick={() => { this.setStateData('metric') }} src={celc_s} />
+                            <img alt='Fahrenheit' className='weatherIconCss' onClick={() => { this.setStateData('imperial') }} src={fahren_d} />
                         </div> :
                         <div>
-                            <img className='weatherIconCss' onClick={() => { this.setStateData('metric') }} src={celc_d} />
-                            <img className='weatherIconCss' onClick={() => { this.setStateData('imperial') }} src={fahren_s} />
+                            <img alt='Celsius' className='weatherIconCss' onClick={() => { this.setStateData('metric') }} src={celc_d} />
+                            <img alt='Fahrenheit' className='weatherIconCss' onClick={() => { this.setStateData('imperial') }} src={fahren_s} />
                         </div>
                     }
                 </div>
