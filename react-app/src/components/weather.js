@@ -10,7 +10,7 @@ import fahren_s from '../assets/fahren_s.png'
 import fahren_d from '../assets/fahren_d.jpg'
 class WeatherDetails extends Component {
 
-    apiKey = '21146477cf5237a1a0160ffe66a16525';
+    apiKey = 'c275b4c891f173875fcdbec95d5f17e8';
     constructor() {
         super();
         this.state = {
@@ -78,8 +78,10 @@ class WeatherDetails extends Component {
         // this.fetchWeatherData();
         return (
             <div>
-                <h1> My Home Town is <b>Ahmedabad, India!</b></h1>
+                <h1> My Home Town is <span style={{ color: "green" }}>Ahmedabad, India!</span></h1>
                 <img src={townImg} height='250px' width='450px' />
+                <p>Ahmedabad is a beautiful urban city located in Gujarat State of India. It is also heritage city.</p>
+                <p>The main attraction and tourist places are Atal Pedestarian bridge, Gandhi Ashram, Alpha One Mall, Riverfront.</p>
                 <div>
                     {this.state.weatherLogo ? <img height='50px' src={this.state.weatherLogo}></img> : ''}
                     {this.state.weather ? <div> Current Temperature in Ahmedabad: {this.state.weather}
